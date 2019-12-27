@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/Demo.dir/main.cc.o  -o Demo  -L/home/cp/build_something/linux_app_C/_zlog/lib -rdynamic -lzlog -Wl,-rpath,/home/cp/build_something/linux_app_C/_zlog/lib 

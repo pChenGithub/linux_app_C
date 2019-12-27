@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+./_zlog/include/zlog.h
+stdarg.h
+-
+stdio.h
+-
+
+/home/cp/build_something/linux_app_C/main.cc
+stdio.h
+-
+zlog.h
+/home/cp/build_something/linux_app_C/zlog.h
+

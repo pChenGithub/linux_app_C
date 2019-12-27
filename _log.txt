@@ -1,0 +1,3 @@
+2019-12-27 22:16:48.568185 INFO   (runtime_log:/home/cp/build_something/linux_app_C/main.cc:16) - hello, zlog info
+2019-12-27 22:16:48.568225 ERROR  (runtime_log:/home/cp/build_something/linux_app_C/main.cc:17) - hello, zlog error
+2019-12-27 22:16:48.568234 WARN   (runtime_log:/home/cp/build_something/linux_app_C/main.cc:18) - hello, zlog warning
