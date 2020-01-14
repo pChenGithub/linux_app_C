@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cp/build_something/linux_app_C/lib4so/say_hello.c
+stdio.h
+-
+say_hello.h
+/home/cp/build_something/linux_app_C/lib4so/say_hello.h
+
+/home/cp/build_something/linux_app_C/lib4so/say_hello.h
+stdio.h
+-
+

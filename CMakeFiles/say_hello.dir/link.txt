@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC   -shared -Wl,-soname,libsay_hello.so -o libsay_hello.so CMakeFiles/say_hello.dir/lib4so/say_hello.c.o  -L/home/cp/build_something/linux_app_C/_zlog/lib 

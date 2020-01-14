@@ -1,3 +1,15 @@
-/home/cp/build_something/linux_app_C/CMakeFiles/edit_cache.dir
+/home/cp/build_something/linux_app_C/CMakeFiles/install.dir
+/home/cp/build_something/linux_app_C/CMakeFiles/list_install_components.dir
 /home/cp/build_something/linux_app_C/CMakeFiles/rebuild_cache.dir
 /home/cp/build_something/linux_app_C/CMakeFiles/Demo.dir
+/home/cp/build_something/linux_app_C/CMakeFiles/install/strip.dir
+/home/cp/build_something/linux_app_C/CMakeFiles/install/local.dir
+/home/cp/build_something/linux_app_C/CMakeFiles/edit_cache.dir
+/home/cp/build_something/linux_app_C/lib4so/CMakeFiles/install.dir
+/home/cp/build_something/linux_app_C/lib4so/CMakeFiles/list_install_components.dir
+/home/cp/build_something/linux_app_C/lib4so/CMakeFiles/rebuild_cache.dir
+/home/cp/build_something/linux_app_C/lib4so/CMakeFiles/say_hello.dir
+/home/cp/build_something/linux_app_C/lib4so/CMakeFiles/edit_cache.dir
+/home/cp/build_something/linux_app_C/lib4so/CMakeFiles/say_hello_s.dir
+/home/cp/build_something/linux_app_C/lib4so/CMakeFiles/install/strip.dir
+/home/cp/build_something/linux_app_C/lib4so/CMakeFiles/install/local.dir

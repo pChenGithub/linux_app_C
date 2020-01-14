@@ -89,6 +89,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -111,27 +122,16 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cp/build_something/linux_app_C/CMakeFiles /home/cp/build_something/linux_app_C/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/cp/build_something/linux_app_C && $(CMAKE_COMMAND) -E cmake_progress_start /home/cp/build_something/linux_app_C/CMakeFiles /home/cp/build_something/linux_app_C/lib4so/CMakeFiles/progress.marks
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f CMakeFiles/Makefile2 lib4so/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cp/build_something/linux_app_C/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f CMakeFiles/Makefile2 lib4so/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,84 +141,78 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f CMakeFiles/Makefile2 lib4so/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f CMakeFiles/Makefile2 lib4so/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/cp/build_something/linux_app_C && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Demo
+# Convenience name for target.
+lib4so/CMakeFiles/say_hello.dir/rule:
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f CMakeFiles/Makefile2 lib4so/CMakeFiles/say_hello.dir/rule
+.PHONY : lib4so/CMakeFiles/say_hello.dir/rule
 
-# Build rule for target.
-Demo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Demo
-.PHONY : Demo
+# Convenience name for target.
+say_hello: lib4so/CMakeFiles/say_hello.dir/rule
 
-# fast build rule for target.
-Demo/fast:
-	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/build
-.PHONY : Demo/fast
-
-#=============================================================================
-# Target rules for targets named say_hello
-
-# Build rule for target.
-say_hello: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 say_hello
 .PHONY : say_hello
 
 # fast build rule for target.
 say_hello/fast:
-	$(MAKE) -f lib4so/CMakeFiles/say_hello.dir/build.make lib4so/CMakeFiles/say_hello.dir/build
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f lib4so/CMakeFiles/say_hello.dir/build.make lib4so/CMakeFiles/say_hello.dir/build
 .PHONY : say_hello/fast
 
-#=============================================================================
-# Target rules for targets named say_hello_s
+# Convenience name for target.
+lib4so/CMakeFiles/say_hello_s.dir/rule:
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f CMakeFiles/Makefile2 lib4so/CMakeFiles/say_hello_s.dir/rule
+.PHONY : lib4so/CMakeFiles/say_hello_s.dir/rule
 
-# Build rule for target.
-say_hello_s: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 say_hello_s
+# Convenience name for target.
+say_hello_s: lib4so/CMakeFiles/say_hello_s.dir/rule
+
 .PHONY : say_hello_s
 
 # fast build rule for target.
 say_hello_s/fast:
-	$(MAKE) -f lib4so/CMakeFiles/say_hello_s.dir/build.make lib4so/CMakeFiles/say_hello_s.dir/build
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f lib4so/CMakeFiles/say_hello_s.dir/build.make lib4so/CMakeFiles/say_hello_s.dir/build
 .PHONY : say_hello_s/fast
 
-main.o: main.cc.o
+say_hello.o: say_hello.c.o
 
-.PHONY : main.o
+.PHONY : say_hello.o
 
 # target to build an object file
-main.cc.o:
-	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/main.cc.o
-.PHONY : main.cc.o
+say_hello.c.o:
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f lib4so/CMakeFiles/say_hello.dir/build.make lib4so/CMakeFiles/say_hello.dir/say_hello.c.o
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f lib4so/CMakeFiles/say_hello_s.dir/build.make lib4so/CMakeFiles/say_hello_s.dir/say_hello.c.o
+.PHONY : say_hello.c.o
 
-main.i: main.cc.i
+say_hello.i: say_hello.c.i
 
-.PHONY : main.i
+.PHONY : say_hello.i
 
 # target to preprocess a source file
-main.cc.i:
-	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/main.cc.i
-.PHONY : main.cc.i
+say_hello.c.i:
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f lib4so/CMakeFiles/say_hello.dir/build.make lib4so/CMakeFiles/say_hello.dir/say_hello.c.i
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f lib4so/CMakeFiles/say_hello_s.dir/build.make lib4so/CMakeFiles/say_hello_s.dir/say_hello.c.i
+.PHONY : say_hello.c.i
 
-main.s: main.cc.s
+say_hello.s: say_hello.c.s
 
-.PHONY : main.s
+.PHONY : say_hello.s
 
 # target to generate assembly for a file
-main.cc.s:
-	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/main.cc.s
-.PHONY : main.cc.s
+say_hello.c.s:
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f lib4so/CMakeFiles/say_hello.dir/build.make lib4so/CMakeFiles/say_hello.dir/say_hello.c.s
+	cd /home/cp/build_something/linux_app_C && $(MAKE) -f lib4so/CMakeFiles/say_hello_s.dir/build.make lib4so/CMakeFiles/say_hello_s.dir/say_hello.c.s
+.PHONY : say_hello.c.s
 
 # Help Target
 help:
@@ -229,15 +223,14 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... Demo"
+	@echo "... say_hello"
+	@echo "... edit_cache"
+	@echo "... say_hello_s"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... edit_cache"
-	@echo "... say_hello"
-	@echo "... say_hello_s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... say_hello.o"
+	@echo "... say_hello.i"
+	@echo "... say_hello.s"
 .PHONY : help
 
 
@@ -249,6 +242,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/cp/build_something/linux_app_C && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
